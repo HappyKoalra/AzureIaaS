@@ -1,6 +1,6 @@
 ### 기존 가상 머신 디스크를 사용하여, 가상 머신을 다시 생성하는 PowerShell 스크립트입니다.
 
-<pre><code>
+```powershell
 # 해당 스크립트는 가상 머신과 관련된 모든 리소스가 같은 리소스 그룹에 들어 있다고 가정하고 작성되었습니다.
 
 $ResourceGroupName = "<리소스 그룹 이름>"
@@ -27,4 +27,4 @@ $dataDisk = Get-AzureRmDisk | ? {$_.Name -eq $DataDiskName}
 $vm = Add-AzureRmVMDataDisk -VM $vm -Name $DataDiskName -CreateOption Attach -ManagedDiskId $dataDisk.Id -Lun 1
 
 New-AzureRmVM -VM $vm -ResourceGroupName $resourceGroupName -Location $location -LicenseType "Windows_Server"
-</code></pre>
+```
