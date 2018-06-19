@@ -6,7 +6,7 @@ Get-AzureRmLocation # 서비스를 제공하고 있는 지역 확인
 Get-AzureRmVMSize -Location '<지역>'
 ```
 
-![가상 머신 SKU](/Network/NIC_QOS.PNG "가상 머신 SKU")
+![가상 머신 SKU](/Network/Images/NIC_QOS.PNG "가상 머신 SKU")
 
 위의 그림에 따르면, Standard_F2s_v2의 경우에는 최대 2개의 NIC, 그리고 875Mbps(b가 소문자 이기에 bit입니다. Byte로 계산하시려면, 8을 나눠줘야 합니다.)까지 제공합니다. 이 이상을 요청할 경우에는, 서비스 제공 제한에 도달하여, Throttling이 걸리게 됩니다. 이는 개별 NIC의 제공 값이 아니라, 전체 합임에 주의해야 합니다.
 
