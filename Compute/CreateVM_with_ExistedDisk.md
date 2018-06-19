@@ -35,3 +35,5 @@ $vm = Add-AzureRmVMDataDisk -VM $vm -Name $DataDiskName -CreateOption Attach -Ma
 
 New-AzureRmVM -VM $vm -ResourceGroupName $resourceGroupName -Location $location -LicenseType "Windows_Server"
 ```
+
+> docs.microsoft.com내 해당 내용을 다루는 공식 문서(__PowerShell을 사용하여 특수 디스크에서 Windows VM 만들기__)는 [여기](https://docs.microsoft.com/ko-kr/azure/virtual-machines/windows/create-vm-specialized)에서 살펴보실 수 있습니다.
