@@ -1,7 +1,7 @@
 ### Azure에서 제공하는 가상 머신들은 사용하는 크기(SKU)에 따라 사용 가능한 NIC의 개수와 처리량이 다르게 설계되어 있습니다.
 
 가상 머신 크기에 대한 문서는 [여기](https://docs.microsoft.com/ko-kr/azure/virtual-machines/windows/sizes)를 참고합니다. 지역별로 제공하는 가상 머신 크기는 상이하므로, 정확한 크기를 확인하고자 할 경우, 아래 *PowerShell*을 통해 가능합니다.
-```powershell
+```azurepowershell
 Get-AzureRmLocation # 서비스를 제공하고 있는 지역 확인
 Get-AzureRmVMSize -Location '<지역>'
 ```

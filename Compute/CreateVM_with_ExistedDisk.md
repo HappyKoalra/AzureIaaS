@@ -1,13 +1,13 @@
 ### 기존 가상 머신 디스크를 사용하여, 가상 머신을 다시 생성해야 할 경우, 현재(2018년 6월 19일)까지 포탈에서는 불가능합니다. 이를 위해 PowerShell을 사용해야 합니다.
 
 > 가상 머신 크기에 대한 문서는 [여기](https://docs.microsoft.com/ko-kr/azure/virtual-machines/windows/sizes)를 참고합니다. 지역별로 제공하는 가상 머신 크기는 상이하므로, 정확한 크기를 확인하고자 할 경우, 아래 *PowerShell*을 통해 가능합니다.
-```powershell
+```azurepowershell
 Get-AzureRmLocation # 서비스를 제공하고 있는 지역 확인
 Get-AzureRmVMSize -Location '<지역>'
 ```
 
 > 기존 가상 머신 디스크를 사용하여, 가상 머신을 다시 생성하는 PowerShell 스크립트
-```powershell
+```azurepowershell
 # 해당 스크립트는 가상 머신과 관련된 모든 리소스가 같은 리소스 그룹에 들어 있다고 가정하고 작성되었습니다.
 
 $ResourceGroupName = "<리소스 그룹 이름>"
