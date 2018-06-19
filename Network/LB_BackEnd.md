@@ -2,7 +2,7 @@
 ![Azure 부하 분산 장치 백엔드 풀](/Network/LB-01.PNG "Azure 부하 분산 장치 백엔드 풀")
 
 단일 가상 머신을 백엔드 풀에 배치하기 위해서는 2가지 방안이 존재합니다.
-1. 가용성 집합을 이용한 형태로 기존 가상 머신을 재생성. Azure 포탈에서 가상 머신을 삭제하면, 사용 중인 NIC, 디스크 등은 모두 남아있게 됩니다. 이를 활용하여, 가상 머신을 가용성 집합에 포함된 형태로 생성합니다. 이에 대한 문서는 [여기](https://github.com/HappyKoalra/AzureIaaS/blob/master/Compute/CreateVM_with_ExistedDisk.md)를 참고합니다.
+1. **가용성 집합을 이용한 형태로 기존 가상 머신을 재생성**. Azure 포탈에서 가상 머신을 삭제하면, 사용 중인 NIC, 디스크 등은 모두 남아있게 됩니다. 이를 활용하여, 가상 머신을 가용성 집합에 포함된 형태로 생성합니다. 이에 대한 문서는 [여기](https://github.com/HappyKoalra/AzureIaaS/blob/master/Compute/CreateVM_with_ExistedDisk.md)를 참고합니다.
 2. 기본 SKU의 부하 분산 장치를 삭제하고, 표준 SKU의 부하 분산 장치를 생성합니다. 
 ![Azure 부하 분산 장치 표준 SKU](/Network/LB-02.PNG "Azure 부하 분산 장치 표준 SKU")
 표준 SKU의 부하 분산 장치는 다수의 단일 가상 머신을 백엔드 풀에 포함할 수 있습니다. 다수의 단일 가상 머신을 백엔드 풀에 참여하는 방법은 현재(2018년 6월 19일)까지 포탈에서는 불가능합니다. 이에 대한 문서는 [여기]()를 참고합니다.
