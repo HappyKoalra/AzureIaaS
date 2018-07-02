@@ -1,7 +1,6 @@
-### Azure에서 제공하는 [가상 네트워크 게이트웨이의 기본 P2S(Point to Site) VPN 구성](https://docs.microsoft.com/ko-kr/azure/vpn-gateway/point-to-site-about)를 통해 가상 네트워크에 개발자/엔지니어가 안전하게 네트워크 연결을 이용할 수 있습니다.
+Azure에서 제공하는 [가상 네트워크 게이트웨이의 기본 P2S(Point to Site) VPN 구성](https://docs.microsoft.com/ko-kr/azure/vpn-gateway/point-to-site-about)를 통해 가상 네트워크에 개발자/엔지니어가 안전하게 네트워크 연결을 이용할 수 있습니다.
 
-Azure의 기본 P2S VPN 구성이 아닌 별도의 가상 머신을 생성하여, 오픈 소스 기반의 OpenVPN을 구성할 수도 있습니다. 
-OpenVPN을 가상 머신에 구성하려면 아래의 단계가 필요합니다.
+### Azure의 기본 P2S VPN 구성이 아닌 별도의 가상 머신을 생성하여, 오픈 소스 기반의 OpenVPN을 구성할 수도 있습니다. OpenVPN을 가상 머신에 구성하려면 아래의 단계가 필요합니다.
 
 이 아티클에서 사용한 가상 네트워크 및 OpenVPN 네트워크 구성은 아래와 같습니다.
 >* Azure 가상 네트워크 IP 주소 대역 192.167.0.0/24
