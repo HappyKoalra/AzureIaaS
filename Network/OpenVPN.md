@@ -10,8 +10,9 @@ OpenVPN을 가상 머신에 구성하려면 아래의 단계가 필요합니다.
 
 1. **Linux 기반**의 가상 머신을 생성
 
-2. 별도의 추가 설정이 필요한 부분은 해당 Linux VM의 NIC에 대해 ![IP Forwarding Enable](/Network/Images/OpenVPN-01.png "NIC IP 전달 사용")이 필요합니다. 
-Guest OS 단이 아닌 Azure Hyper-V 호스트의 VM 구성에서 NIC을 P-Mode로 변경해주어, 해당 VM IP 주소로 향하는 패킷과 더불어, 다른 주소 패킷도 수신을 가능하게 합니다. VPN 구성뿐만 아니라, Azure내에서 Router나 보안 어플라이언스 구성시에도 필요한 옵션입니다.
+2. 별도의 추가 설정이 필요한 부분은 해당 Linux VM의 NIC에 대해 IP Forward 구성이 필요합니다. Guest OS 단이 아닌 Azure Hyper-V 호스트의 VM 구성에서 NIC을 P-Mode로 변경해주어, 해당 VM IP 주소로 향하는 패킷과 더불어, 다른 주소 패킷도 수신을 가능하게 합니다. VPN 구성뿐만 아니라, Azure내에서 Router나 보안 어플라이언스 구성시에도 필요한 옵션입니다.
+
+![IP Forwarding Enable](/Network/Images/OpenVPN-01.png "NIC IP 전달 사용")
 
 3. 해당 Linux에 [OpenVPN을 설치](http://www.startupcto.com/server-tech/centos/setting-up-openvpn-server-on-centos)합니다. 기본적으로 EasyRSA를 사용하여, Key를 생성합니다. 더불어 server.conf를 구성, OpenVPN 클라이언트에서 키와 ovpn의 설정은 기존 OpenVPN 구성과 동일합니다.
 
