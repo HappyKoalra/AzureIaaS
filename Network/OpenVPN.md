@@ -17,10 +17,13 @@ Guest OS 단이 아닌 Azure Hyper-V 호스트의 VM 구성에서 NIC을 P-Mode�
 
 4. OpenVPN의 server.conf의 구성 중 확인해야 할 사항은 아래와 같습니다.
 * VPN 연결용 네트워크
+
 ![server.conf-01](/Network/Images/OpenVPN-02.png "server.conf-01")
 * 192.167.0.0/24를 VPN 클라이언트의 라우팅 경로로 전달
+
 ![server.conf-02](/Network/Images/OpenVPN-03.png "server.conf-02")
 * /etc/sysctl.conf내 ip_forward 구성
+
 ![server.conf-03](/Network/Images/OpenVPN-04.png "server.conf-03")
 
 5. OpenVPN 서버에 구성된 클라이언트 Key와 ovpn 설정을 클라이언트에 전달하여, OpenVPN 서버로 접속되는지 확인합니다. 이 단계까지는 Azure에서 별도의 라우팅 테이블 수정없이도, 확인이 가능합니다.
