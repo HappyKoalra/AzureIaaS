@@ -19,7 +19,7 @@ OpenVPN을 가상 머신에 구성하려면 아래의 단계가 필요합니다.
 4. OpenVPN의 server.conf의 구성 중 확인해야 할 사항은 아래와 같습니다.
 * VPN 연결용 네트워크 - 10.6.0.0/24
 
-![server.conf-01](/Network/Images/OpenVPN-02.png "server.conf-01")
+![server.conf-01](/Network/Images/OpenVPN-02.png){: width="50%" height="50%"}
 * 192.167.0.0/24를 VPN 클라이언트의 라우팅 경로로 전달
 
 ![server.conf-02](/Network/Images/OpenVPN-03.png "server.conf-02")
